@@ -1,157 +1,151 @@
-# 🌦️ WhetherForecasting
+# 🌦️ Weather Forecasting App
 
-A machine learning-based weather forecasting application that predicts weather conditions using historical meteorological data. The project analyzes various environmental parameters and generates accurate weather predictions to assist users in planning daily activities and making informed decisions.
-
-## 📌 Overview
-
-Weather forecasting plays a crucial role in agriculture, transportation, disaster management, and daily life. This project leverages data analysis and machine learning techniques to forecast weather conditions based on historical weather datasets.
-
-The system processes weather-related features such as temperature, humidity, pressure, wind speed, and precipitation to generate predictions and visualize weather trends.
-
-## ✨ Features
-
-* 📊 Historical weather data analysis
-* 🌡️ Temperature prediction
-* 💧 Humidity forecasting
-* 🌧️ Rainfall prediction
-* 🌬️ Wind speed analysis
-* 📈 Data visualization and trend analysis
-* 🤖 Machine Learning-based forecasting models
-* 📋 User-friendly prediction interface
-
-## 🛠️ Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* Jupyter Notebook
-
-```
-
-## ⚙️ Installation
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/Aravindra2007/WhetherForecasting.git
-cd WhetherForecasting
-```
-
-### 2. Create Virtual Environment (Optional)
-
-```bash
-python -m venv venv
-```
-
-### 3. Activate Environment
-
-**Windows**
-
-```bash
-venv\Scripts\activate
-```
-
-**Linux/Mac**
-
-```bash
-source venv/bin/activate
-```
-
-### 4. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-## 🚀 Running the Project
-
-```bash
-python app.py
-```
-
-or open the Jupyter Notebook:
-
-```bash
-jupyter notebook
-```
-
-## 📊 Machine Learning Workflow
-
-1. Data Collection
-2. Data Cleaning and Preprocessing
-3. Feature Engineering
-4. Model Training
-5. Model Evaluation
-6. Weather Prediction
-7. Result Visualization
-
-## 📈 Sample Parameters
-
-The model may use:
-
-* Temperature
-* Humidity
-* Atmospheric Pressure
-* Wind Speed
-* Rainfall
-* Visibility
-* Cloud Cover
-
-## 🎯 Applications
-
-* Agriculture Planning
-* Disaster Preparedness
-* Travel Planning
-* Climate Research
-* Smart City Solutions
-
-## 🔮 Future Enhancements
-
-* Real-time weather API integration
-* Deep Learning forecasting models
-* Interactive dashboard
-* Mobile application support
-* Multi-city forecasting
-* Weather alert notifications
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a new branch
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit your changes
-
-```bash
-git commit -m "Add new feature"
-```
-
-4. Push to GitHub
-
-```bash
-git push origin feature-name
-```
-
-5. Open a Pull Request
-
-## 📜 License
-
-This project is licensed under the MIT License.
-
-## 👨‍💻 Author
-
-**Aravind Kumar**
-
-GitHub: https://github.com/Aravindra2007
+A Java-based Android application that provides real-time weather forecasts using live weather data. Built to give users quick access to current conditions and upcoming weather trends for any location.
 
 ---
 
-⭐ If you found this project useful, please consider starring the repository.
+## 📱 Screenshots
+
+> _Add screenshots of the app here_
+
+---
+
+## ✨ Features
+
+- 🌡️ Current temperature display
+- 💧 Humidity and atmospheric pressure readings
+- 🌬️ Wind speed information
+- 🌧️ Rainfall and precipitation forecasts
+- 🔍 City search functionality
+- 📍 Location-based weather detection
+- 🌤️ Clean and user-friendly interface
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Language | Java |
+| Platform | Android |
+| IDE | Android Studio |
+| Weather Data | OpenWeatherMap API (or similar) |
+| Networking | Retrofit / Volley |
+| UI | XML Layouts |
+
+---
+
+## ⚙️ Installation & Setup
+
+### Prerequisites
+
+- Android Studio (latest stable version)
+- Android SDK (API level 21+)
+- A free API key from [OpenWeatherMap](https://openweathermap.org/api) (or the weather provider used)
+
+### Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Aravindra2007/WhetherForecasting.git
+   cd WhetherForecasting
+   ```
+
+2. **Open in Android Studio**
+   - Launch Android Studio
+   - Select **File > Open** and navigate to the cloned folder
+   - Wait for Gradle sync to complete
+
+3. **Add your API key**
+   - Locate the API key constant in the source (e.g., `MainActivity.java` or a `Constants.java` file)
+   - Replace the placeholder with your own API key:
+     ```java
+     private static final String API_KEY = "YOUR_API_KEY_HERE";
+     ```
+
+4. **Run the app**
+   - Connect an Android device or start an emulator
+   - Click **Run ▶** or press `Shift + F10`
+
+---
+
+## 📂 Project Structure
+
+```
+WhetherForecasting/
+│
+└── wheather/
+    ├── app/
+    │   └── src/
+    │       ├── main/
+    │       │   ├── java/       # Java source files
+    │       │   ├── res/        # Layouts, drawables, values
+    │       │   └── AndroidManifest.xml
+    │       └── test/
+    └── build.gradle
+```
+
+---
+
+## 🌐 API Reference
+
+This app uses a weather API to fetch live data. Example endpoint:
+
+```
+GET https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric
+```
+
+**Sample response fields used:**
+- `main.temp` — Temperature
+- `main.humidity` — Humidity
+- `wind.speed` — Wind speed
+- `weather[0].description` — Weather condition
+
+---
+
+## 🔮 Future Enhancements
+
+- [ ] 7-day extended forecast
+- [ ] Weather alerts and notifications
+- [ ] Dark mode support
+- [ ] Widget for home screen
+- [ ] Offline caching of last fetched data
+- [ ] Multi-language support
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how:
+
+1. Fork the repository
+2. Create a feature branch
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit your changes
+   ```bash
+   git commit -m "Add: brief description of change"
+   ```
+4. Push to your fork
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 👨‍💻 Author
+
+**Aravind Kumar**  
+GitHub: [@Aravindra2007](https://github.com/Aravindra2007)
+
+---
+
+⭐ If this project helped you, consider giving it a star!
